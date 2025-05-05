@@ -6,40 +6,40 @@ import java.util.UUID;
 
 public class TicketDTO {
 
-    private UUID Id;
-    private String Description;
-    private UUID UserId;
-    private TicketStatus Status;
+    private UUID id;
+    private String description;
+    private UUID userId;
+    private TicketStatus status;
 
     public UUID getId() {
-        return Id;
+        return id;
     }
 
     public void setId(UUID id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public UUID getUserId() {
-        return UserId;
+        return userId;
     }
 
     public void setUserId(UUID userId) {
-        UserId = userId;
+        this.userId = userId;
     }
 
     public TicketStatus getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(TicketStatus status) {
-        Status = status;
+        this.status = status;
     }
 }

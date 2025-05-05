@@ -2,84 +2,87 @@ package com.dev.leadBackEngineerTest.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import org.hibernate.annotations.UuidGenerator;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
+@Table(name = "Usuario")
 public class User {
 
     @Id
     @GeneratedValue
-    @UuidGenerator
-    private UUID Id;
+    private UUID id;
 
     @NotBlank
-    private String FirstName;
+    private String firstName;
 
     @NotBlank
-    private String LastName;
+    private String lastName;
 
-    private LocalDateTime CreatedAt;
+    private LocalDateTime createdAt;
 
-    private LocalDateTime UpdatedAt;
+    private LocalDateTime updatedAt;
 
     @PrePersist
     protected void onCreate() {
-        CreatedAt = UpdatedAt = LocalDateTime.now();
+        createdAt = updatedAt = LocalDateTime.now();
     }
 
     @PreUpdate
     protected void onUpdate() {
-        UpdatedAt = LocalDateTime.now();
+        updatedAt = LocalDateTime.now();
+    }
+
+    public User() {
+
     }
 
     public User(UUID id, String lastName, String firstName, LocalDateTime createdAt, LocalDateTime updatedAt) {
-        Id = id;
-        LastName = lastName;
-        FirstName = firstName;
-        this.CreatedAt = createdAt;
-        this.UpdatedAt = updatedAt;
+        this.id = id;
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public UUID getId() {
-        return Id;
+        return id;
     }
 
     public void setId(UUID id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public LocalDateTime getCreatedAt() {
-        return CreatedAt;
+        return createdAt;
     }
 
     public void setCreatedAt(LocalDateTime createdAt) {
-        this.CreatedAt = createdAt;
+        this.createdAt = createdAt;
     }
 
     public LocalDateTime getUpdatedAt() {
-        return UpdatedAt;
+        return updatedAt;
     }
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.UpdatedAt = updatedAt;
+        this.updatedAt = updatedAt;
     }
 }

@@ -1,6 +1,5 @@
 package com.dev.leadBackEngineerTest.domain;
 
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -16,11 +15,11 @@ public class Ticket {
     @Id
     @GeneratedValue
     @UuidGenerator
-    private UUID Id;
+    private UUID id;
 
     @NotBlank
     @Size(max = 500)
-    private String Description;
+    private String description;
 
     @Enumerated(EnumType.STRING)
     private TicketStatus status;
@@ -29,42 +28,42 @@ public class Ticket {
     @ManyToOne
     private User user;
 
-    private LocalDateTime CreatedAt;
-    private LocalDateTime UpdatedAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     @PrePersist
     protected void onCreate() {
-        CreatedAt = UpdatedAt = LocalDateTime.now();
+        createdAt = updatedAt = LocalDateTime.now();
     }
 
     @PreUpdate
     protected void onUpdate() {
-        UpdatedAt = LocalDateTime.now();
+        updatedAt = LocalDateTime.now();
     }
 
     public Ticket(UUID id, String description, TicketStatus status, User user, LocalDateTime createdAt, LocalDateTime updatedAt) {
-        Id = id;
-        Description = description;
+        this.id = id;
+        this.description = description;
         this.status = status;
         this.user = user;
-        CreatedAt = createdAt;
-        UpdatedAt = updatedAt;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public UUID getId() {
-        return Id;
+        return id;
     }
 
     public void setId(UUID id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public TicketStatus getStatus() {
@@ -84,18 +83,18 @@ public class Ticket {
     }
 
     public LocalDateTime getCreatedAt() {
-        return CreatedAt;
+        return createdAt;
     }
 
     public void setCreatedAt(LocalDateTime createdAt) {
-        CreatedAt = createdAt;
+        this.createdAt = createdAt;
     }
 
     public LocalDateTime getUpdatedAt() {
-        return UpdatedAt;
+        return updatedAt;
     }
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
-        UpdatedAt = updatedAt;
+        this.updatedAt = updatedAt;
     }
 }

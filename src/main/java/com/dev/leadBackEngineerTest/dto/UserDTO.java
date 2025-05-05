@@ -4,31 +4,31 @@ import java.util.UUID;
 
 public class UserDTO {
 
-    private UUID Id;
-    private String FirstName;
-    private String LastName;
+    private UUID id;
+    private String firstName;
+    private String lastName;
 
     public UUID getId() {
-        return Id;
+        return id;
     }
 
     public void setId(UUID id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 }
