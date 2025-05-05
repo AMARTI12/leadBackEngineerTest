@@ -12,6 +12,16 @@ public class UserDTO {
     @NotBlank(message = "Los apellidos no pueden estar vacíos")
     private String lastName;
 
+    public UserDTO(UUID id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public UserDTO() {
+
+    }
+
     public UUID getId() {
         return id;
     }
