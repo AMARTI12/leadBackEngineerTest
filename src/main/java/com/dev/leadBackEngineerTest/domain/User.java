@@ -14,10 +14,8 @@ public class User {
     @GeneratedValue
     private UUID id;
 
-    @NotBlank
     private String firstName;
 
-    @NotBlank
     private String lastName;
 
     private LocalDateTime createdAt;

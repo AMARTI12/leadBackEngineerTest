@@ -14,17 +14,14 @@ public class Ticket {
 
     @Id
     @GeneratedValue
-    @UuidGenerator
     private UUID id;
 
-    @NotBlank
     @Size(max = 500)
     private String description;
 
     @Enumerated(EnumType.STRING)
     private TicketStatus status;
 
-    @NotNull
     @ManyToOne
     private User user;
 
