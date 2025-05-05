@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "631aa509-d453-4e90-9b53-35f2e0b3b951",
+		"name": "LeadBackEngineerTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13244835",
+		"_collection_link": "https://ese-services.postman.co/workspace/My-Workspace~b088f95f-47c2-47df-8ed2-26579c9709ab/collection/13244835-631aa509-d453-4e90-9b53-35f2e0b3b951?action=share&source=collection_link&creator=13244835"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"username\": \"AdminTest\", \r\n    \"password\": \"AdminTestDVP2025*\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pblRlc3QiLCJpYXQiOjE3NDY0NjAxNTMsImV4cCI6MTc0NjQ2Mzc1M30.3o6T1ziyWZcSQIekEpOjv-UCFarO8F0K6JQrQvdVnQ4s8gGRjD5RwRhOAn9Z1W1ssbTfA1jS9sFHQx78-auOjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Juan\",\r\n    \"lastName\": \"Garcia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pblRlc3QiLCJpYXQiOjE3NDY0NjAxNTMsImV4cCI6MTc0NjQ2Mzc1M30.3o6T1ziyWZcSQIekEpOjv-UCFarO8F0K6JQrQvdVnQ4s8gGRjD5RwRhOAn9Z1W1ssbTfA1jS9sFHQx78-auOjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pblRlc3QiLCJpYXQiOjE3NDY0NjAxNTMsImV4cCI6MTc0NjQ2Mzc1M30.3o6T1ziyWZcSQIekEpOjv-UCFarO8F0K6JQrQvdVnQ4s8gGRjD5RwRhOAn9Z1W1ssbTfA1jS9sFHQx78-auOjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/usuarios/64b05574-d6bf-45b7-9581-fdd9eeb7bee0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"64b05574-d6bf-45b7-9581-fdd9eeb7bee0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pblRlc3QiLCJpYXQiOjE3NDY0NjAxNTMsImV4cCI6MTc0NjQ2Mzc1M30.3o6T1ziyWZcSQIekEpOjv-UCFarO8F0K6JQrQvdVnQ4s8gGRjD5RwRhOAn9Z1W1ssbTfA1jS9sFHQx78-auOjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Juan\",\r\n    \"lastName\": \"Martinez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/usuarios/64b05574-d6bf-45b7-9581-fdd9eeb7bee0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"64b05574-d6bf-45b7-9581-fdd9eeb7bee0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tickets",
+			"item": [
+				{
+					"name": "Get Tickets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pblRlc3QiLCJpYXQiOjE3NDY0NjAxNTMsImV4cCI6MTc0NjQ2Mzc1M30.3o6T1ziyWZcSQIekEpOjv-UCFarO8F0K6JQrQvdVnQ4s8gGRjD5RwRhOAn9Z1W1ssbTfA1jS9sFHQx78-auOjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tickets By Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pblRlc3QiLCJpYXQiOjE3NDY0NjAxNTMsImV4cCI6MTc0NjQ2Mzc1M30.3o6T1ziyWZcSQIekEpOjv-UCFarO8F0K6JQrQvdVnQ4s8gGRjD5RwRhOAn9Z1W1ssbTfA1jS9sFHQx78-auOjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/tickets?status=OPEN",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"tickets"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "OPEN"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tickets By UserId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pblRlc3QiLCJpYXQiOjE3NDY0NjAxNTMsImV4cCI6MTc0NjQ2Mzc1M30.3o6T1ziyWZcSQIekEpOjv-UCFarO8F0K6JQrQvdVnQ4s8gGRjD5RwRhOAn9Z1W1ssbTfA1jS9sFHQx78-auOjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/tickets?userId=7c451687-c96a-4b56-b32d-2a2f5c0e7352",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"tickets"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "7c451687-c96a-4b56-b32d-2a2f5c0e7352"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tickets By Status And UserId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pblRlc3QiLCJpYXQiOjE3NDY0NjAxNTMsImV4cCI6MTc0NjQ2Mzc1M30.3o6T1ziyWZcSQIekEpOjv-UCFarO8F0K6JQrQvdVnQ4s8gGRjD5RwRhOAn9Z1W1ssbTfA1jS9sFHQx78-auOjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/tickets?status=CLOSED&userId=7c451687-c96a-4b56-b32d-2a2f5c0e7352",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"tickets"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "CLOSED"
+								},
+								{
+									"key": "userId",
+									"value": "7c451687-c96a-4b56-b32d-2a2f5c0e7352"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ticket By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pblRlc3QiLCJpYXQiOjE3NDY0NjAxNTMsImV4cCI6MTc0NjQ2Mzc1M30.3o6T1ziyWZcSQIekEpOjv-UCFarO8F0K6JQrQvdVnQ4s8gGRjD5RwRhOAn9Z1W1ssbTfA1jS9sFHQx78-auOjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/tickets/55973a7f-bae7-402c-a862-fc10afa93404",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"tickets",
+								"55973a7f-bae7-402c-a862-fc10afa93404"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pblRlc3QiLCJpYXQiOjE3NDY0NjAxNTMsImV4cCI6MTc0NjQ2Mzc1M30.3o6T1ziyWZcSQIekEpOjv-UCFarO8F0K6JQrQvdVnQ4s8gGRjD5RwRhOAn9Z1W1ssbTfA1jS9sFHQx78-auOjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"7c451687-c96a-4b56-b32d-2a2f5c0e7352\",\r\n    \"description\": \"Mi Quinto ticket de prueba\",\r\n    \"status\": \"OPEN\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pblRlc3QiLCJpYXQiOjE3NDY0NjAxNTMsImV4cCI6MTc0NjQ2Mzc1M30.3o6T1ziyWZcSQIekEpOjv-UCFarO8F0K6JQrQvdVnQ4s8gGRjD5RwRhOAn9Z1W1ssbTfA1jS9sFHQx78-auOjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"7c451687-c96a-4b56-b32d-2a2f5c0e7352\",\r\n    \"description\": \"Actualización de prueba\",\r\n    \"status\": \"CLOSED\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/tickets/23d6cb86-00c2-433b-8806-aaba85a98db4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"tickets",
+								"23d6cb86-00c2-433b-8806-aaba85a98db4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pblRlc3QiLCJpYXQiOjE3NDY0NjAxNTMsImV4cCI6MTc0NjQ2Mzc1M30.3o6T1ziyWZcSQIekEpOjv-UCFarO8F0K6JQrQvdVnQ4s8gGRjD5RwRhOAn9Z1W1ssbTfA1jS9sFHQx78-auOjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/tickets/6a0cda3c-6769-4052-a45c-0bedf3f64cd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"tickets",
+								"6a0cda3c-6769-4052-a45c-0bedf3f64cd3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
