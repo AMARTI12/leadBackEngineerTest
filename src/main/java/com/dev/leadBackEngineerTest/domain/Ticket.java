@@ -38,6 +38,10 @@ public class Ticket {
         updatedAt = LocalDateTime.now();
     }
 
+    public Ticket() {
+
+    }
+
     public Ticket(UUID id, String description, TicketStatus status, User user, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.description = description;

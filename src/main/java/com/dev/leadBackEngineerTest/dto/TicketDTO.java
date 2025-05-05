@@ -20,6 +20,8 @@ public class TicketDTO {
 
     private TicketStatus status;
 
+
+
     public UUID getId() {
         return id;
     }
