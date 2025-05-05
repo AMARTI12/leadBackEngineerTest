@@ -2,6 +2,7 @@ package com.dev.leadBackEngineerTest.controllers;
 
 import com.dev.leadBackEngineerTest.dto.UserDTO;
 import com.dev.leadBackEngineerTest.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +17,7 @@ public class userController {
     private UserService userService;
 
     @PostMapping
-    public UserDTO createUser(@RequestBody UserDTO userDTO) {
+    public UserDTO createUser(@Valid @RequestBody UserDTO userDTO) {
         return userService.createUser(userDTO);
     }
 }

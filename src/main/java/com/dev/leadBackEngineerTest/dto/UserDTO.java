@@ -1,11 +1,15 @@
 package com.dev.leadBackEngineerTest.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 import java.util.UUID;
 
 public class UserDTO {
 
     private UUID id;
+    @NotBlank(message = "Los nombres no pueden estar vacíos")
     private String firstName;
+    @NotBlank(message = "Los apellidos no pueden estar vacíos")
     private String lastName;
 
     public UUID getId() {
