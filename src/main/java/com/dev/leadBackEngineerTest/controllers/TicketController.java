@@ -72,7 +72,7 @@ public class TicketController {
     public Page<TicketDTO> getTickets(
             @Parameter(description = "Filtrar por estado") @RequestParam(required = false) TicketStatus status,
             @Parameter(description = "Filtrar por ID de usuario") @RequestParam(required = false) UUID userId,
-            Pageable pageable) {
+            @Parameter(hidden = true) Pageable pageable) {
         return ticketService.filterTickets(status, userId, pageable);
     }
 }
