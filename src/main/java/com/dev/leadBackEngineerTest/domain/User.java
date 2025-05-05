@@ -21,26 +21,26 @@ public class User {
     @NotBlank
     private String LastName;
 
-    private LocalDateTime createdAt;
+    private LocalDateTime CreatedAt;
 
-    private LocalDateTime updatedAt;
+    private LocalDateTime UpdatedAt;
 
     @PrePersist
     protected void onCreate() {
-        createdAt = updatedAt = LocalDateTime.now();
+        CreatedAt = UpdatedAt = LocalDateTime.now();
     }
 
     @PreUpdate
     protected void onUpdate() {
-        updatedAt = LocalDateTime.now();
+        UpdatedAt = LocalDateTime.now();
     }
 
     public User(UUID id, String lastName, String firstName, LocalDateTime createdAt, LocalDateTime updatedAt) {
         Id = id;
         LastName = lastName;
         FirstName = firstName;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
+        this.CreatedAt = createdAt;
+        this.UpdatedAt = updatedAt;
     }
 
     public UUID getId() {
@@ -68,18 +68,18 @@ public class User {
     }
 
     public LocalDateTime getCreatedAt() {
-        return createdAt;
+        return CreatedAt;
     }
 
     public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+        this.CreatedAt = createdAt;
     }
 
     public LocalDateTime getUpdatedAt() {
-        return updatedAt;
+        return UpdatedAt;
     }
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
+        this.UpdatedAt = updatedAt;
     }
 }
